@@ -1,0 +1,16 @@
+package estructuras_principales;
+
+public class Variables {
+
+	public static void main(String[] args) {
+		
+		byte edad;
+		
+		edad = 10;
+		
+		int raiz = (int)Math.round(edad);
+		
+		System.out.println(raiz);
+	}
+
+}

@@ -1,0 +1,22 @@
+package estructuras_principales;
+
+public class Strings {
+	public static void main(String args[]) {
+		String mi_nombre = "Juan";
+		
+		System.out.println("Mi nombre es: "+mi_nombre);
+		
+		
+		System.out.println("La cantidad de caracteres es: "+mi_nombre.length());
+		
+		
+		String cadena = "Juan";
+		
+		System.out.println(mi_nombre.equals(cadena));
+		
+		System.out.println(mi_nombre.charAt(mi_nombre.length()-1));
+		
+		System.out.println(mi_nombre.substring(0, 3));
+	
+	}
+}
