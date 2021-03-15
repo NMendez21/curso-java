@@ -1,0 +1,11 @@
+package poo;
+
+public class Uso_Coche {
+	public static void main(String[] Args)
+	{
+		Coche Renault  = new Coche();
+		
+		Coche Peugeot  = new Coche();
+		
+	}
+}
