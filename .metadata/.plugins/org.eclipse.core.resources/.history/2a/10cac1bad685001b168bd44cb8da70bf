@@ -1,0 +1,18 @@
+package estructuras_principales;
+
+public class ArrayBidimensional {
+
+	public static void main(String[] args) {
+		
+		int[][] matriz = new int[2][2];
+			
+		//[columnas][filas]
+		matriz[0][0] = 1;
+		matriz[0][1] = 2;
+		matriz[1][0] = 3;
+		matriz[1][1] = 4;
+		
+
+	}
+
+}

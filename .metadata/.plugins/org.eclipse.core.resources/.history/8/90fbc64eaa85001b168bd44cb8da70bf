@@ -1,0 +1,12 @@
+package estructuras_principales;
+import java.util.*;
+
+
+public class EntradaSalidaI {
+	public static void main(String []Args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Ingrese por favor el nuevo valor: ");
+		
+	}
+}

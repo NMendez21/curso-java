@@ -1,0 +1,9 @@
+package estructuras_principales;
+
+public class NumerosFormat {
+	public static void main(String []Args){
+		double x=100000000;
+		
+		System.out.println(x/3);
+	}
+}
