@@ -2,10 +2,10 @@ package poo;
 
 public class Coche {
 	private int ruedas;
-	private int largo;
-	private int ancho;
-	private int motor;
-	private int peso;
+	int largo;
+	int ancho;
+	int motor;
+	int peso;
 	
 	/*metodo constructor*/
 	public Coche() {
@@ -18,13 +18,4 @@ public class Coche {
 		
 		
 	}
-	
-	
-	public String devolver_largo() {
-		
-		return "El largo del auto es: "+largo;
-		
-	}
-	
-	
 }

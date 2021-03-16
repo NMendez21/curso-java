@@ -5,11 +5,7 @@ public class Uso_Coche {
 	{
 		Coche Renault  = new Coche();
 		
-		//Renault.ruedas = 3;
-		
-		//System.out.println("Este objeto tiene "+Renault+" ruedas.");
-		
-		System.out.println(Renault.devolver_largo());
+		System.out.println("Este objeto tiene "+Renault.ruedas+" ruedas.");
 		
 		Coche Peugeot  = new Coche();
 		

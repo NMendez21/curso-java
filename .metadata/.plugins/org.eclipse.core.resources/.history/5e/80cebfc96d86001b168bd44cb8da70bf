@@ -18,13 +18,4 @@ public class Coche {
 		
 		
 	}
-	
-	
-	public String devolver_largo() {
-		
-		return "El largo del auto es: "+largo;
-		
-	}
-	
-	
 }
