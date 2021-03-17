@@ -1,0 +1,26 @@
+package poo;
+
+public class Uso_Coche {
+	public static void main(String[] Args)
+	{
+		Coche Renault  = new Coche();
+		
+		//Renault.ruedas = 3;
+		
+		//System.out.println("Este objeto tiene "+Renault+" ruedas.");
+		
+		System.out.println(Renault.devolver_datos_generales());
+		
+		Coche Peugeot  = new Coche();
+		
+		Renault.establece_color("blue");
+		
+		System.out.println(Renault.devolver_color());
+	
+	
+		Renault.establece_asientos_cuero("no");
+		
+		System.out.println(Renault.devolver_asientos());
+	
+	}
+}

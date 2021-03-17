@@ -1,0 +1,49 @@
+package poo;
+
+public class Coche {
+	private int ruedas;
+	private int largo;
+	private int ancho;
+	private int motor;
+	private int peso_plataforma;
+	
+	//variantes
+	private String color;
+	int peso_total;
+	boolean asientos_cuero, climatizador;
+	
+	
+	/*metodo constructor*/
+	public Coche() {
+		
+		ruedas = 4;
+		largo = 2000;
+		ancho = 300;
+		motor = 1600;
+		peso_plataforma = 500;
+		
+		
+	}
+	
+	
+	public String devolver_largo() {
+		
+		return "El largo del auto es: "+largo;
+		
+	}
+	
+	public void establece_color(String color_coche) {
+		
+		//color = "azul"; //metodos setters
+		color = color_coche;
+		
+	}	
+	
+	public String devolver_color() {
+		
+		return "El color del carro es "+color;
+		
+	}
+	
+	
+}
