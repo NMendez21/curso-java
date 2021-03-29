@@ -1,0 +1,54 @@
+package poo;
+import javax.swing.*;
+
+public class Uso_Vehiculo {
+	public static void main(String[] Args)
+	{
+		/*Coche Renault  = new Coche();
+		
+		//Renault.ruedas = 3;
+		
+		//System.out.println("Este objeto tiene "+Renault+" ruedas.");
+		
+		System.out.println(Renault.devolver_datos_generales());
+		
+		Coche Peugeot  = new Coche();
+		
+		
+		String color_carro = JOptionPane.showInputDialog("Introduce el color: ");
+		Renault.establece_color(color_carro);
+		
+		System.out.println(Renault.devolver_color());
+	
+		String pregunta1 = JOptionPane.showInputDialog("¿Tiene asientos de cuero?");
+		Renault.establece_asientos_cuero(pregunta1);
+		
+		System.out.println(Renault.devolver_asientos());
+		
+		System.out.println("");
+		
+		String pregunta2 = JOptionPane.showInputDialog("¿Tiene climatizador?");
+		Renault.configura_climatizador(pregunta2);
+		
+		
+		System.out.println(Renault.devolver_climatizador());
+		System.out.println(Renault.devolver_peso_coche());
+		
+		System.out.println("El precio final del coche es: "+Renault.precio_coche());
+		*/
+		
+		
+		//video 41 -- herencia II
+		
+		Coche micoche = new Coche();
+		
+		micoche.establece_color("rojo");
+		
+		Furgoneta mifurgoneta = new Furgoneta();
+		
+		
+		
+		
+		
+	}
+}

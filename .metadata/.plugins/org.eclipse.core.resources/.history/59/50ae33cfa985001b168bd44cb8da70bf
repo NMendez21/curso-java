@@ -1,7 +1,0 @@
-package estructuras_principales;
-
-public class EntradaSalidaI {
-	public static void main(String []Args) {
-		
-	}
-}

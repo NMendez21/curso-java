@@ -1,0 +1,105 @@
+package poo;
+
+import java.util.*;
+import javax.swing.*;
+
+public class Uso_Empleado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Jefatura jefe = new Jefatura("Nicolas",300,2020,1,13);
+		
+		jefe.establece_incentivo(23.00);
+		
+		double sueldo = jefe.dame_sueldo();
+		
+		JOptionPane.showInputDialog("El salario de este jefe con descuento es: $"+sueldo);
+			
+	}
+
+}
+
+class Empleado{
+	
+	public Empleado(String nom, double sue, int agno, int mes, int dia)
+	{
+		nombre=nom;
+		sueldo=sue;
+		GregorianCalendar calendar = new GregorianCalendar(agno,mes-1,dia);
+		altaContrato=calendar.getTime();
+			
+	}
+	
+	
+	/*inicio sobrecarga de constructores*/
+	
+	public Empleado(String nom) {
+		
+		/*nombre = nom;
+		sueldo = 30000;*/
+		
+		//llamada al otro constructor al principal
+		this(nom,30000,2000,01,01);
+		
+		
+	}
+	
+	
+	/*find de sobrecarga*/
+	
+	//getter
+	public String dime_nombre() {
+			return "El nombre del empleado es: "+nombre;
+	}
+	
+	//getter
+	public double dame_sueldo() {
+			return sueldo;	
+	}
+	
+	//getter
+	public Date dame_fecha_contrato(){
+			return altaContrato;
+	}
+	
+	public void sube_sueldo(double porcentaje) {
+		sueldo+=((sueldo*porcentaje)/100);
+	}
+	
+	private String nombre;
+	private double sueldo;
+	private Date altaContrato;
+	
+}
+
+class Jefatura extends Empleado{
+	
+	public Jefatura(String nom, double sue, int agno, int mes, int dia) {
+		
+		//llamada a clase padre
+		super(nom,sue,agno,mes,dia);
+			
+	}
+	
+	
+	public void establece_incentivo(double b) {
+		
+		incentivo = b;
+		
+	}
+	
+	public double dame_sueldo()
+	{
+		
+		double sueldo_jefe = super.dame_sueldo();
+		return sueldo_jefe + incentivo;
+		
+	}
+	
+	private double incentivo;
+	
+	
+	
+}
+

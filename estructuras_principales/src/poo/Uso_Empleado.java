@@ -19,11 +19,23 @@ public class Uso_Empleado {
 		System.out.println("Nombre: "+emp2.dime_nombre()+" Sueldo: $"+emp2.dame_sueldo()+" Fecha de alta: "+emp2.dame_fecha_contrato());
 		System.out.println("Nombre: "+emp3.dime_nombre()+" Sueldo: $"+emp3.dame_sueldo()+" Fecha de alta: "+emp3.dame_fecha_contrato());*/
 		
-		Empleado[] misEmpleados = new Empleado[3];
+		Jefatura jefe_rrhh = new Jefatura("Miguel",300,2020,2,13);
+		
+		jefe_rrhh.establece_incentivo(2570);
+		
+		Empleado[] misEmpleados = new Empleado[6];
 		
 		misEmpleados[0] = new Empleado("Nicolas",700,2021,2,17);
 		misEmpleados[1] = new Empleado("Ana Lopez",800,1995,6,10);
 		misEmpleados[2] = new Empleado("Pedro Sanchez",500,1993,2,11);
+		misEmpleados[3] = new Empleado("María Joseé");
+		
+		misEmpleados[4] = jefe_rrhh; //polimorfismo. principio de sustitucion
+		
+		misEmpleados[5] = new Jefatura("Maria",95000,1999,5,26);
+		
+		
+		
 		
 		/*for(int i=0; i<3; i++)
 		{
@@ -47,18 +59,15 @@ public class Uso_Empleado {
 		
 		for(Empleado e: misEmpleados)
 		{
-			System.out.println(e.dime_nombre()+" Sueldo: "+e.dame_sueldo()+" Fecha Alta: "+e.dame_fecha_contrato());
+			System.out.println("id:"+e.devolver_id_siguiente()+" "+e.dime_nombre()+" Sueldo: "+e.dame_sueldo()+" Fecha Alta: "+e.dame_fecha_contrato());
 		}
-		
-		
-		
-		
-		
+			
 	}
 
 }
 
 class Empleado{
+	
 	
 	
 	
@@ -68,6 +77,37 @@ class Empleado{
 		sueldo=sue;
 		GregorianCalendar calendar = new GregorianCalendar(agno,mes-1,dia);
 		altaContrato=calendar.getTime();
+		
+		id = idSiguiente;
+		idSiguiente++;
+		
+	}
+	
+	
+	/*inicio sobrecarga de constructores*/
+	public Empleado(String nom) {
+		
+		/*nombre = nom;
+		sueldo = 30000;*/
+		
+		//llamada al otro constructor al principal
+		this(nom,30000,2000,01,01);
+	
+	}
+	
+	/*find de sobrecarga*/
+	
+	
+	public int devolver_id_siguiente() {
+		
+			return id;			
+		
+	}
+	
+	
+	public static int dime_id_siguiente() {
+		
+			return idSiguiente;
 			
 	}
 	
@@ -91,8 +131,41 @@ class Empleado{
 		sueldo+=((sueldo*porcentaje)/100);
 	}
 	
+	public int id;
+	private static int idSiguiente = 1;
 	private String nombre;
 	private double sueldo;
 	private Date altaContrato;
 	
 }
+
+class Jefatura extends Empleado{
+	
+	public Jefatura(String nom, double sue, int agno, int mes, int dia) {
+		
+		//llamada a clase padre
+		super(nom,sue,agno,mes,dia);
+			
+	}
+	
+	
+	public void establece_incentivo(double b) {
+		
+		incentivo = b;
+		
+	}
+	
+	public double dame_sueldo()
+	{
+		
+		double sueldo_jefe = super.dame_sueldo();
+		return sueldo_jefe + incentivo;
+		
+	}
+	
+	private double incentivo;
+	
+	
+	
+}
+

@@ -27,7 +27,7 @@ public class Coche {
 	
 	public String devolver_datos_generales() {
 		
-		return "El largo del auto es: "+largo+"\nLa cantidad de ruedas es: "+ruedas+"\nLa cantidad de ruedas es: "+ruedas+" \nUn peso de la plataforma de "+peso_plataforma+" kg";
+		return "El largo del auto es: "+largo+"\nLa cantidad de ruedas es: "+ruedas+"\nEl ancho es "+ancho+"\nUn peso de la plataforma de "+peso_plataforma+" kg";
 		
 	}
 	
