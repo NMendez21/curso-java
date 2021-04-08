@@ -1,0 +1,100 @@
+package poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Uso_Persona {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Persona{
+	
+	public Persona(String nom) 
+	{
+		nombre = nom;
+		
+	}
+	
+	public String devolverNombre() {
+		
+		return nombre;
+		
+	}
+	
+	
+	private String nombre;
+	
+	
+}
+
+
+class Empleado2{
+	
+	public Empleado2(String nom, double sue, int agno, int mes, int dia)
+	{
+		nombre=nom;
+		sueldo=sue;
+		GregorianCalendar calendar = new GregorianCalendar(agno,mes-1,dia);
+		altaContrato=calendar.getTime();
+		
+		id = idSiguiente;
+		idSiguiente++;
+		
+	}
+	
+	
+	/*inicio sobrecarga de constructores*/
+	//public Empleado(String nom) {
+		
+		/*nombre = nom;
+		sueldo = 30000;*/
+		
+		//llamada al otro constructor al principal
+		//this(nom,30000,2000,01,01);
+	
+	//}
+	
+	/*find de sobrecarga*/
+	
+	
+	public int devolver_id_siguiente() {
+		
+			return id;			
+		
+	}
+	
+	
+	public static int dime_id_siguiente() {
+		
+			return idSiguiente;
+			
+	}
+	
+	
+	
+	//getter
+	public double dame_sueldo() {
+			return sueldo;	
+	}
+	
+	//getter
+	public Date dame_fecha_contrato(){
+			return altaContrato;
+	}
+	
+	public void sube_sueldo(double porcentaje) {
+		sueldo+=((sueldo*porcentaje)/100);
+	}
+	
+	public int id;
+	private static int idSiguiente = 1;
+
+	private double sueldo;
+	private Date altaContrato;
+	
+}
