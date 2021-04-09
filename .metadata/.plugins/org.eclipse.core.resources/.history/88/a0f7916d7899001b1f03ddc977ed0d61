@@ -1,0 +1,24 @@
+package practica;
+
+public class uso_tienda {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Tienda td = new Tienda("la comarca","venta de metales");
+		Tienda td1 = new Tienda("la francisca","estructuras metalicas");
+		
+		Tienda[] arreglo = new Tienda[3];
+		
+		arreglo[0] = new Tienda("peras peras","venta de peras");
+		arreglo[1]= new Tienda("manzanas","venta de manzanas");
+		arreglo[2] = new Tienda("sandias", "venta de sandias");
+		
+	
+		
+		System.out.println("Identificador "+td.devolverId()+" ,El nombre de la tienda es "+td.devolverTienda()+" y el rubro de la tienda es: "+td.devolverRubro());
+		System.out.println("Identificador "+td1.devolverId()+" ,El nombre de la tienda es "+td1.devolverTienda()+" y el rubro de la tienda es: "+td1.devolverRubro());
+		
+	}
+
+}

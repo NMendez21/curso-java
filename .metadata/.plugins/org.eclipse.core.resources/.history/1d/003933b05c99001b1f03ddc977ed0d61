@@ -1,0 +1,37 @@
+package practica;
+
+public class tienda {
+	
+	
+	public tienda() {
+		
+		
+	}
+	
+	
+	//getters y setters
+	//setter
+	public void registrarTienda(String tienda) {
+		
+		this.tienda = tienda;
+		
+	}	
+	
+	
+	//getter
+	public String tienda()
+	{
+		
+		return this.tienda;
+		
+		
+	}
+	
+	
+	
+	
+	private String tienda;
+	
+	
+	
+}

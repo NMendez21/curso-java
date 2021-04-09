@@ -52,8 +52,7 @@ class Empleados{
 	
 	public void aumentar_id() {
 		
-		id++;
-		
+		id++;	
 	}
 	
 	public String devolver_datos()

@@ -1,0 +1,85 @@
+package practica;
+
+abstract public class Tienda {
+	
+	public Tienda(String tienda, String rubro) {
+		
+		this.tienda = tienda;
+		this.rubro = rubro;
+		
+		id=identificador;
+		identificador=identificador+1;	
+	}
+	
+	//getters y setters
+	
+	//setter
+	public void registrarTienda(String tienda) {
+		this.tienda = tienda;	
+	}	
+	
+	//getter
+	public String devolverTienda()
+	{
+		return this.tienda;
+	}
+
+	//getter
+	public String devolverRubro() {
+		
+		return this.rubro;
+	}
+	
+	//getter
+	public int devolverId() {
+		
+		return id;
+		
+	}
+	
+	//funcion abstracta dentro de clase abstracta
+	public abstract int devolverOrganizacion();
+	
+	//sobrecarga de constructor
+	/*public tienda(String rubro) {
+		
+		this.rubro = rubro;
+		
+	}*/
+	
+	private int id;
+	private String rubro;
+	private String tienda;
+	
+	//con una variable static la variable pertenece a la clase y no a la instancia del objeto
+	public static int identificador = 1;
+	
+}
+
+
+class MiniTienda extends Tienda {
+	
+	private int cantidad_empleados;
+	
+	//constructor clase minitienda
+	public MiniTienda(String tienda, String rubro, int cantidad_empleados) {
+		
+		super(tienda,rubro); //llamada a constructor padre
+		
+		this.cantidad_empleados = cantidad_empleados;
+	}
+	
+	
+	//getter obtener empleados
+	public int devolverCantidadEmpleados() {
+		
+		return this.cantidad_empleados;
+	
+	}
+	
+	public abstract String devolverOrganizacion() {
+		
+		return "Hi";
+		
+	}
+}

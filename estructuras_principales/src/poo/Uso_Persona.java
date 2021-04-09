@@ -17,9 +17,6 @@ public class Uso_Persona {
 				System.out.println(e.devolverNombre()+" , "+e.dameDescripcion());
 			
 		}
-		
-		
-		
 	}
 
 }
@@ -40,10 +37,7 @@ abstract class Persona{
 	
 	public abstract String dameDescripcion();
 	
-	
-	
 	private String nombre;
-	
 	
 }
 
@@ -53,8 +47,6 @@ class Empleado2 extends Persona{
 	public Empleado2(String nom, double sue, int agno, int mes, int dia)
 	{
 		super(nom);
-		
-		
 		
 		//nombre=nom;
 		sueldo=sue;
@@ -69,6 +61,7 @@ class Empleado2 extends Persona{
 	public String dameDescripcion() {
 		
 		return "Este empleado tiene un id = " + id + "con un sueldo = "+sueldo;
+	
 	}
 	
 	

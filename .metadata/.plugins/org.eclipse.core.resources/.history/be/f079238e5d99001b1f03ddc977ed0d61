@@ -1,0 +1,10 @@
+package practica;
+
+public class uso_tienda {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		tienda obj1 = new tienda('la comarca','venta de metales');
+	}
+
+}

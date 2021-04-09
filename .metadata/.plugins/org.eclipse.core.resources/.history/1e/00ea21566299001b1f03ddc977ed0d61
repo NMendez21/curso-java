@@ -1,0 +1,70 @@
+package practica;
+
+public class Tienda {
+	
+	public Tienda(String tienda, String rubro) {
+		
+		this.tienda = tienda;
+		this.rubro = rubro;
+		
+		id=identificador;
+		identificador=identificador+1;	
+	}
+	
+	//getters y setters
+	
+	//setter
+	public void registrarTienda(String tienda) {
+		this.tienda = tienda;	
+	}	
+	
+	
+	//getter
+	public String devolverTienda()
+	{
+		return this.tienda;
+	}
+
+	//getter
+	public String devolverRubro() {
+		
+		return this.rubro;
+	}
+	
+	//getter
+	public int devolverId() {
+		
+		return id;
+		
+	}
+	
+	
+	//sobrecarga de constructor
+	/*public tienda(String rubro) {
+		
+		this.rubro = rubro;
+		
+	}*/
+	
+	private int id;
+	private String rubro;
+	private String tienda;
+	
+	//con una variable static la variable pertenece a la clase y no a la instancia del objeto
+	public static int identificador = 1;
+	
+}
+
+
+class MiniTienda extends Tienda {
+	
+	private int cantidadEmpleados;
+	
+	//constructor clase minitienda
+	public MiniTienda(String tienda, String rubro) {
+		
+		super(tienda,rubro); //llamada a constructor padre
+		
+	}
+		
+}

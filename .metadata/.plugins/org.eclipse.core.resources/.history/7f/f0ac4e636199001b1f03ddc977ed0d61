@@ -1,0 +1,16 @@
+package practica;
+
+public class uso_tienda {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		tienda td = new tienda("la comarca","venta de metales");
+		tienda td1 = new tienda("la francisca","estructuras metalicas");
+		
+		
+		System.out.println("El nombre de la tienda es "+td.devolverTienda()+" y el rubro de la tienda es ");
+		
+	}
+
+}

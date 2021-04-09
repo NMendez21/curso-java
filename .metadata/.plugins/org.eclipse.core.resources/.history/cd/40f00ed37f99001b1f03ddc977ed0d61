@@ -21,7 +21,7 @@ public class Uso_Empleado {
 		
 		Jefatura jefe_rrhh = new Jefatura("Miguel",300,2020,2,13);
 		
-		jefe_rrhh.establece_incentivo(2570);
+		jefe_rrhh.establece_incentivo(2570); //estableciendo incentivo
 		
 		Empleado[] misEmpleados = new Empleado[6];
 		
@@ -32,6 +32,12 @@ public class Uso_Empleado {
 		misEmpleados[4] = jefe_rrhh; //polimorfismo. principio de sustitucion
 		misEmpleados[5] = new Jefatura("Maria",95000,1999,5,26);
 		
+		Jefatura jefa_finanzas = (Jefatura)misEmpleados[5];
+		jefa_finanzas.establece_incentivo(55000); 
+		
+		
+		
+		 
 		
 		/*for(int i=0; i<3; i++)
 		{
@@ -40,9 +46,10 @@ public class Uso_Empleado {
 			
 		}*/
 		
+		//subimos sueldo
 		for(Empleado e: misEmpleados)
 		{
-			e.sube_sueldo(10);
+			e.sube_sueldo(5);
 		}
 		
 		/*for(int i=0; i<3; i++)
@@ -62,9 +69,6 @@ public class Uso_Empleado {
 }
 
 class Empleado{
-	
-	
-	
 	
 	public Empleado(String nom, double sue, int agno, int mes, int dia)
 	{
@@ -137,13 +141,13 @@ class Empleado{
 class Jefatura extends Empleado{
 	
 	public Jefatura(String nom, double sue, int agno, int mes, int dia) {
-		
+	
 		//llamada a clase padre
 		super(nom,sue,agno,mes,dia);
 			
 	}
 	
-	
+	//metodo setter
 	public void establece_incentivo(double b) {
 		
 		incentivo = b;
@@ -161,6 +165,17 @@ class Jefatura extends Empleado{
 	private double incentivo;
 	
 	
+	
+}
+
+
+class Director extends Jefatura{
+	
+	public Director(String nom, double sue, int agno, int mes, int dia) {
+		//llamada a clase padre
+		super(nom,sue,agno,mes,dia);
+		
+	}
 	
 }
 

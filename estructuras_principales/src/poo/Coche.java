@@ -1,6 +1,8 @@
 package poo;
 
 public class Coche {
+	
+	//encapsuladas
 	private int ruedas;
 	private int largo;
 	private int ancho;

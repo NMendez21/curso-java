@@ -37,7 +37,7 @@ public class Uso_Empleado {
 		
 		
 		
-		
+		 
 		
 		/*for(int i=0; i<3; i++)
 		{
@@ -147,7 +147,7 @@ class Jefatura extends Empleado{
 			
 	}
 	
-	
+	//metodo setter
 	public void establece_incentivo(double b) {
 		
 		incentivo = b;
@@ -176,9 +176,6 @@ class Director extends Jefatura{
 		super(nom,sue,agno,mes,dia);
 		
 	}
-	
-	
-	
 	
 }
 
